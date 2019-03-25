@@ -1,0 +1,14 @@
+<div class="container animated fadeIn m-3">
+  <h1>
+    Héroes <small>Marvel & DC</small>
+  </h1>
+  <hr />
+
+  <div class="card-columns">
+<!-- *ngFor="let heroe of heroes; let i = index;" -->
+    <app-tarjeta [heroe]="heroe" [index]="i" *ngFor="let heroe of heroes; let i = index;"></app-tarjeta>
+
+  </div><!--deck cards content-->
+
+
+</div><!--container-->

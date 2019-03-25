@@ -1,0 +1,15 @@
+<div class="container top30">
+
+  <hr />
+
+  <div class="card-columns">
+
+    <app-tarjeta [heroe]="heroe" [index]="heroe.idx" *ngFor="let heroe of heroesEncontrados; "></app-tarjeta>
+
+
+
+  </div><!--deck cards content-->
+      <div *ngIf="heroesEncontrados.length==0" class="alert alert-info">
+        <h1 align="center" style="max-width:50%; margin:0 auto;" class="text-primary animated fadeIn" ><i class="far fa-sad-tear"> </i> No hay resultados para mostrar con el término : <b> {{ termino }} </b> </h1>
+      </div>
+</div>
