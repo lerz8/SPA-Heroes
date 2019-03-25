@@ -1,0 +1,27 @@
+<div class="container animated fadeIn m-3">
+  <h1>
+    Héroes <small>Marvel & DC</small>
+  </h1>
+  <hr />
+
+  <div class="card-columns">
+
+    <div class="card animated fadeIn" *ngFor="let heroe of heroes; let i = index;">
+      <img [src]="heroe.img" class="card-img-top" [alt]="heroe.nombre">
+      <div class="card-body">
+        <h5 class="card-title">{{ heroe.nombre }}</h5>
+        <p class="card-text">{{ heroe.bio }}</p>
+      </div>
+      <div class="card-footer">
+        <small class="text-muted">Fecha Aparición: {{ heroe.aparicion | date:'MMM-y' }}</small>
+        <hr />
+        <button class="btn btn-outline-primary btn btn-block" (click)="verHeroe(i);">Ver más...</button>
+      </div>
+    </div>
+
+
+
+  </div><!--deck content-->
+
+
+</div><!--container-->
