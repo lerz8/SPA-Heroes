@@ -57,13 +57,32 @@ export class HeroesService {
     }
   ];
 
+  //Obtener todos los héroes
   getHeroes():Heroe[]{
     return this.heroes;
   }
 
+  //Obtener un héroe enviando el id
   getHeroe(idx:number):Heroe{
     return this.heroes[idx];
   }
+
+  BuscarHeroe(termino:string){
+    let heroesEncontrados:Heroe[]=[];
+    // for(let heroe of this.heroes){
+    for(let i =0; i < this.heroes.length; i++)
+    {
+      let heroe = this.heroes[i];
+      if(((heroe.nombre.toLowerCase()).indexOf(termino))>=0){
+        heroe.idx=i;
+        heroesEncontrados.push(heroe);
+      }
+
+    }
+
+    return heroesEncontrados;
+  }
+
 }
 
 
@@ -73,4 +92,5 @@ export interface Heroe{
   img:string;
   aparicion:string;
   casa:string;
+  idx?:number;
 }

@@ -3,6 +3,10 @@ body{
 }
 
 
+.top30{
+  margin-top: 30px;
+}
+
 .animated {
   -webkit-animation-duration: 1s;
   animation-duration: 1s;
