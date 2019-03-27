@@ -5,7 +5,7 @@
     <p class="card-text">{{ heroe.bio }}</p>
   </div>
   <div class="card-footer">
-    <small class="text-muted">Fecha Aparición: {{ heroe.aparicion | date:'MMM-y' }}</small>
+    <small class="text-muted">Fecha Aparición: {{ heroe.aparicion | date:'MMMM,y' }}</small>
     <hr />
     <button class="btn btn-outline-primary btn btn-block" (click)="verHeroe();">Ver más...</button>
   </div>

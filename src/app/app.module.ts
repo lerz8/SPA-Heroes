@@ -1,6 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-
+import { NgModule, LOCALE_ID } from '@angular/core';
+import localeEs from '@angular/common/locales/es';
+import { registerLocaleData } from '@angular/common';
+registerLocaleData(localeEs);
 
 
 //routes
@@ -23,6 +25,7 @@ import { TarjetaComponent } from './components/tarjeta/tarjeta.component';
 
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -39,7 +42,11 @@ import { TarjetaComponent } from './components/tarjeta/tarjeta.component';
     FeatureRoutingModule
   ],
   providers: [
-    HeroesService
+    HeroesService,
+    {
+      provide: LOCALE_ID,
+      useValue: 'es'
+    }
   ],
   bootstrap: [AppComponent]
 })
